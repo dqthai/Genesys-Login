@@ -19,7 +19,7 @@
 			echo "Database connection error";
 			exit;
 		}
-	$result = pg_query("INSERT INTO users(fName,lName,alias,email,username,nickname,language) VALUES('$fName', '$lname', '$alias', '$email', '$username', '$nickname', '$language')");
+	$result = pg_query("INSERT INTO users(fName,lName,alias,email,username,nickname,language) VALUES('$fName', '$lName', '$alias', '$email', '$username', '$nickname', '$language')");
 	$registered = pg_affected_rows($result);
 	echo "$registered row was inserted";
 	} else {
