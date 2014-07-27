@@ -18,7 +18,12 @@ echo "<table width=\"90%\" align=center border=2>";
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">EMAIL</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">USER LICENSE</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">PROFILE</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">SERVICE CLOUD USER</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">SALESFORCE1 USER</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">CALL CENTER</td></tr>";
 			
 			while($row=pg_fetch_array($result)){
 				$first=$row['first'];
@@ -28,7 +33,12 @@ echo "<table width=\"90%\" align=center border=2>";
 				$username=$row['username'];
 				$nickname=$row['nickname'];
 				$language=$row['language'];
-				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
+				$user_license=$row['user_license'];
+				$profile=$row['profile'];
+				$service_cloud_user=$row['service_cloud_user'];
+				$salesforce1_user=$row['salesforce1_user'];
+				$call_center=$row['call_center'];
+				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td>td>$user_license</td>td>$profile</td>td>$service_cloud_user</td>td>$salesforce1_user</td>td>$call_center</td></tr>";	
 			} 
 			echo "</table>";
 

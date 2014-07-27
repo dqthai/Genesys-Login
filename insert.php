@@ -6,6 +6,11 @@
 	$username = $_REQUEST['username'];
 	$nickname = $_REQUEST['nickname'];
 	$language = $_REQUEST['language'];
+	$user_license = "Salesforce";
+	$profile = "Genesys Demo User";
+	$service_cloud_user = "YES";
+	$salesforce1_user = "YES";
+	$call_center = "Genesys Gplus for Salesforce.com";
 	
 	if($first && $last && $alias && $email && $username && $nickname && $language){
 	  function pg_connection_string(){
@@ -17,7 +22,7 @@
 			echo "Database connection error";
 			exit;
 		}
-	$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
+	$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language,user_license,profile,service_cloud_user,salesforce1_user,call_center) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language', '$user_license', '$profile', '$service_cloud_user', '$salesforce1_user', '$call_center')");
 	$registered = pg_affected_rows($result);
 	echo "$registered row was inserted";
 	} else {
