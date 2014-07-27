@@ -11,7 +11,7 @@
 	
 	if($fName && $lName && $alias && $email && $username && $nickname && $language){
 	  function pg_connection_string(){
-		return  "dbname=d9obju9qqjs2bl host=ec2-23-23-183-5.compute-1.amazonaws.com port=5432 user=hjaabcekfmalrapassword=IAQJ5iBAKcazgisvh5PQeSWAdV sslmode=require";
+		return  "dbname=d9obju9qqjs2bl host=ec2-23-23-183-5.compute-1.amazonaws.com port=5432 user=hjaabcekfmalra password=IAQJ5iBAKcazgisvh5PQeSWAdV sslmode=require";
 }
 
 	$db = pg_connect(pg_connection_string());
@@ -19,7 +19,7 @@
 			echo "Database connection error";
 			exit;
 		}
-	mysql_query("INSERT INTO users(fName,lName,alias,email,username,nickname,language) VALUES('$fName', '$lname', '$alias', '$email', '$username', '$nickname', '$language')");
+	pg_query("INSERT INTO users(fName,lName,alias,email,username,nickname,language) VALUES('$fName', '$lname', '$alias', '$email', '$username', '$nickname', '$language')");
 	$registered = pg_affected_rows();
 	echo "$registered row was inserted";
 	} else {
