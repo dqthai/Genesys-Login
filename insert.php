@@ -26,6 +26,7 @@
 		echo "you have to complete the form!";
 	}
 	pg_close();
-	
+
+	include("links.php");
 ?>
 

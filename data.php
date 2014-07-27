@@ -17,6 +17,6 @@ while($row = pg_fetch_array($result)){
 }
 
 pg_close();
-include("form.php");
-?>
 
+include("links.php");
+?>
