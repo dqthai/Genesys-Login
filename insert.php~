@@ -6,11 +6,6 @@
 	$username = $_REQUEST['username'];
 	$nickname = $_REQUEST['nickname'];
 	$language = $_REQUEST['language'];
-	$user_license = "Salesforce";
-	$profile = "Genesys Demo User";
-	$service_cloud_user = "YES";
-	$salesforce1_user = "YES";
-	$call_center = "Genesys Gplus for Salesforce.com";
 	
 	if($first && $last && $alias && $email && $username && $nickname && $language){
 	  function pg_connection_string(){
