@@ -13,9 +13,28 @@ if(!$db) {
 $result = pg_query("SELECT * FROM users");
 while($row = pg_fetch_array($result)){
 	echo $row['fName'];
-	echo "<br />"
+	echo "<br />";
 }
-
+echo "<table width=\"90%\" align=center border=2>";
+			echo "<td width=\"40%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LAST NAME</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">ALIAS</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">EMAIL</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
+			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
+			
+			while($row=pg_fetch_array($result)){
+				$fName=$row['fName'];
+				$lName=$row['lName'];
+				$alias=$row['alias'];
+				$email=$row['email'];
+				$username=$row['username'];
+				$nickname=$row['nickname'];
+				$language=$row['language'];
+				echo "<tr><td>$fName</td><td>$lName</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
+			} 
+			echo "</table>";
 
 pg_close();
 
