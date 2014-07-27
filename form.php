@@ -6,8 +6,8 @@
 
 <form method="post" action="insert.php">
 <table border="0" width="60%">
-<tr><td width"10%">First Name: </td><td><input type="text" name="fName" /></td></tr>
-<tr><td width"10%">Last Name: </td><td><input type="text" name="lName" /></td></tr>
+<tr><td width"10%">First Name: </td><td><input type="text" name="first" /></td></tr>
+<tr><td width"10%">Last Name: </td><td><input type="text" name="last" /></td></tr>
 <tr><td width"10%">Alias: </td><td><input type="text" name="alias" /></td></tr>
 <tr><td width"10%">Email: </td><td><input type="text" name="email" /></td></tr>
 <tr><td width"10%">Username: </td><td><input type="text" name="username" /></td></tr>

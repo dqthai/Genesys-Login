@@ -21,14 +21,14 @@ echo "<table width=\"90%\" align=center border=2>";
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
 			
 			while($row=pg_fetch_array($result)){
-				$fName=$row['fName'];
-				$lName=$row['lName'];
+				$first=$row['first'];
+				$last=$row['last'];
 				$alias=$row['alias'];
 				$email=$row['email'];
 				$username=$row['username'];
 				$nickname=$row['nickname'];
 				$language=$row['language'];
-				echo "<tr><td>$fName</td><td>$lName</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
+				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
 			} 
 			echo "</table>";
 

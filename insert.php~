@@ -7,7 +7,7 @@
 	$nickname = $_REQUEST['nickname'];
 	$language = $_REQUEST['language'];
 	
-	
+	echo $fName." ".$lName;
 	
 	if($fName && $lName && $alias && $email && $username && $nickname && $language){
 	  function pg_connection_string(){
