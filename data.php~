@@ -22,17 +22,16 @@ echo "<table width=\"90%\" align=center border=2>";
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
 			
 			while($row=mysql_fetch_array($result)){
-				$id=$row['id'];
-				$name=$row['name'];
+				$fName=$row['fName'];
+				$lName=$row['lName'];
+				$alias=$row['alias'];
 				$email=$row['email'];
-				$password=$row['password'];
-				echo "<tr><td align=center><a href=\"edit.php?ids=$id&names=$name&emails=$email&passwords=$password\">$id</a></td><td>$name</td><td>$email</td><td>$password</td></tr>";	
+				$username=$row['username'];
+				$nickname=$row['nickname'];
+				$language=$row['language'];
+				echo "<tr><td>$fName</td><td>$lName</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
 			} 
 			echo "</table>";
-while($row = pg_fetch_array($result)){
-	echo $row['lName']." ".$row['fName']." ".$row['alias']." ".$row['email']." ".$row['username']." ".$row['nickname']." ".$row['language'];
-	echo "<br />";
-}
 
 pg_close();
 
