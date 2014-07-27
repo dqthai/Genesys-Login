@@ -18,6 +18,7 @@
 			exit;
 		}
 	$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
+	echo $result;
 	$registered = pg_affected_rows($result);
 	echo "$registered row was inserted";
 	} else {
