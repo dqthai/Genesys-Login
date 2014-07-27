@@ -12,8 +12,7 @@ if(!$db) {
 
 $result = pg_query("SELECT * FROM users");
 echo "<table width=\"90%\" align=center border=2>";
-			echo "<tr><td width=\"40%\" align=center bgcolor =\"FFFF00\">ID</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
+			echo "<td width=\"40%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LAST NAME</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">ALIAS</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">EMAIL</td>

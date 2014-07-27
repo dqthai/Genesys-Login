@@ -21,7 +21,7 @@ echo "<table width=\"90%\" align=center border=2>";
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
 			
-			while($row=mysql_fetch_array($result)){
+			while($row=pg_fetch_array($result)){
 				$fName=$row['fName'];
 				$lName=$row['lName'];
 				$alias=$row['alias'];
