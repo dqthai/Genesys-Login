@@ -11,4 +11,7 @@ if(!$db) {
 }
 echo "Successful";
 $result = pg_query($db, "SELECT statement goes here");
+
+include("form.php");
 ?>
+
