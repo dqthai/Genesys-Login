@@ -9,6 +9,6 @@ if(!$db) {
 	echo "Database connection error";
 	exit;
 }
-echo "Successful";
+
 $result = pg_query($db, "SELECT statement goes here");
 ?>
