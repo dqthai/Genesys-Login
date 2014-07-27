@@ -9,7 +9,6 @@ if(!$db) {
 	echo "Database connection error";
 	exit;
 }
-echo "Successful connection";
 
 $result = pg_query("SELECT * FROM users");
 while($row = pg_fetch_array($result)){
