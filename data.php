@@ -31,7 +31,7 @@ $result = pg_query("SELECT * FROM users");
 				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
 			} 
 			echo "</table>";
-
+			echo "<br /><br /><br /><br /><br /><br />"
 $permissions = pg_query("SELECT * FROM permissions");
 			echo "<table width=\"90%\" align=center border=2>";
 			echo "<tr>
