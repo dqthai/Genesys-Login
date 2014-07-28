@@ -11,6 +11,7 @@ if(!$db) {
 }
 
 $result = pg_query("SELECT * FROM users");
+			echo "<h3>USERS</h3>";
 			echo "<table width=\"90%\" align=center border=2>";
 			echo "<tr><td width=\"20%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">LAST NAME</td>
@@ -33,6 +34,7 @@ $result = pg_query("SELECT * FROM users");
 			echo "</table>";
 			echo "<br /><br /><br /><br /><br /><br />"
 $permissions = pg_query("SELECT * FROM permissions");
+			echo "<h3>USER'S PERMISSIONS</h3>";
 			echo "<table width=\"90%\" align=center border=2>";
 			echo "<tr>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
