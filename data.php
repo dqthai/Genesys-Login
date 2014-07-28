@@ -20,7 +20,11 @@ $permissions = pg_query("SELECT * FROM permissions");
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td>
-			</tr>";
+			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USER LICENSE</td>
+			<td width=\"20%\" align=center bgcolor =\"FFFF00\">PROFILE</td>
+			<td width=\"20%\" align=center bgcolor =\"FFFF00\">SERVICE CLOUD USER</td>
+			<td width=\"20%\" align=center bgcolor =\"FFFF00\">SALESFORCE1 USER</td>
+			<td width=\"20%\" align=center bgcolor =\"FFFF00\">CALL CENTER</td></tr>";
 			
 			while($row=pg_fetch_array($result) || $row1=pg_fetch_array($permissions)){
 				$first=$row['first'];
@@ -30,11 +34,11 @@ $permissions = pg_query("SELECT * FROM permissions");
 				$username=$row['username'];
 				$nickname=$row['nickname'];
 				$language=$row['language'];
-				$user_license=$permissions['user_license'];
-				$profile=$permissions['profile'];
-				$service_cloud_user=$permissions['service_cloud_user'];
-				$salesforce1_user=$permissions['salesforce1_user'];
-				$call_center=$permissions['call_center'];
+				$user_license=$row1['user_license'];
+				$profile=$row1['profile'];
+				$service_cloud_user=$row1['service_cloud_user'];
+				$salesforce1_user=$row1['salesforce1_user'];
+				$call_center=$row1['call_center'];
 				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";	
 			} 
 			echo "</table>";
