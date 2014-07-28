@@ -21,7 +21,7 @@
 	$permissions = pg_query("INSERT INTO permissions DEFAULT VALUES");
 	$registered = pg_affected_rows($result);
 	$permission_success = pg_affected_rows($permissions);
-	echo "$registered row was inserted and $permissions_success row was inserted";
+	echo "$registered row was inserted and $permission_success row was inserted";
 	} else {
 		echo "you have to complete the form!";
 	}
