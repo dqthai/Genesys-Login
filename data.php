@@ -49,7 +49,7 @@ while($row1=pg_fetch_array($permissions)){
 				$service_cloud_user=$row1['service_cloud_user'];
 				$salesforce1_user=$row1['salesforce1_user'];
 				$call_center=$row1['call_center'];
-				echo "<tr><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";		
+				echo "<tr><td>$username</td><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";		
 }
 				echo "</table>";
 
