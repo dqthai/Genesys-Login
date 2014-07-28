@@ -34,11 +34,11 @@ $permissions = pg_query("SELECT * FROM permissions");
 				$username=$row['username'];
 				$nickname=$row['nickname'];
 				$language=$row['language'];
-				$userlicense=$permissions['user_license'];
+				$user_license=$permissions['user_license'];
 				$profile=$permissions['profile'];
-				$serviceclouduser=$permissions['service_cloud_user'];
-				$salesforce1user=$permissions['salesforce1_user'];
-				$callcenter=$permissions['call_center'];
+				$service_cloud_user=$permissions['service_cloud_user'];
+				$salesforce1_user=$permissions['salesforce1_user'];
+				$call_center=$permissions['call_center'];
 				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";	
 			} 
 			echo "</table>";
