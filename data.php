@@ -11,7 +11,7 @@ if(!$db) {
 }
 
 $result = pg_query("SELECT * FROM users");
-$permissions = pg_query("SELECT * FROM permissions");
+
 			echo "<table width=\"90%\" align=center border=2>";
 			echo "<tr><td width=\"40%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LAST NAME</td>
@@ -26,7 +26,7 @@ $permissions = pg_query("SELECT * FROM permissions");
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">SALESFORCE1 USER</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">CALL CENTER</td></tr>";
 			
-			while($row=pg_fetch_array($result) || $row1=pg_fetch_array($permissions)){
+			while($row=pg_fetch_array($result) ){
 				$first=$row['first'];
 				$last=$row['last'];
 				$alias=$row['alias'];
@@ -34,12 +34,8 @@ $permissions = pg_query("SELECT * FROM permissions");
 				$username=$row['username'];
 				$nickname=$row['nickname'];
 				$language=$row['language'];
-				$user_license=$permissions['user_license'];
-				$profile=$permissions['profile'];
-				$service_cloud_user=$permissions['service_cloud_user'];
-				$salesforce1_user=$permissions['salesforce1_user'];
-				$call_center=$permissions['call_center'];
-				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";	
+	
+				echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$language</td></tr>";	
 			} 
 			echo "</table>";
 
