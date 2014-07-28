@@ -20,11 +20,7 @@ $permissions = pg_query("SELECT * FROM permissions");
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td>
-			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USER LICENSE</td>
-			<td width=\"20%\" align=center bgcolor =\"FFFF00\">PROFILE</td>
-			<td width=\"20%\" align=center bgcolor =\"FFFF00\">SERVICE CLOUD USER</td>
-			<td width=\"20%\" align=center bgcolor =\"FFFF00\">SALESFORCE1 USER</td>
-			<td width=\"20%\" align=center bgcolor =\"FFFF00\">CALL CENTER</td></tr>";
+			</tr>";
 			
 			while($row=pg_fetch_array($result) || $row1=pg_fetch_array($permissions)){
 				$first=$row['first'];
