@@ -26,7 +26,7 @@ $permissions = pg_query("SELECT * FROM permissions");
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">SALESFORCE1 USER</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">CALL CENTER</td></tr>";
 			
-			while($row=pg_fetch_array($result) && $row1=pg_fetch_array($permissions)){
+			while($row=pg_fetch_array($result) || $row1=pg_fetch_array($permissions)){
 				$first=$row['first'];
 				$last=$row['last'];
 				$alias=$row['alias'];
