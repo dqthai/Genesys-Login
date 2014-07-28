@@ -13,13 +13,7 @@ if(!$db) {
 $result = pg_query("SELECT * FROM users");
 $permissions = pg_query("SELECT * FROM permissions");
 			echo "<table width=\"90%\" align=center border=2>";
-			echo "<tr><td width=\"40%\" align=center bgcolor =\"FFFF00\">FIRST NAME</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LAST NAME</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">ALIAS</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">EMAIL</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">USERNAME</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">NICKNAME</td>
-			<td width=\"40%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td>
+			echo "<tr>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">USER LICENSE</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">PROFILE</td>
 			<td width=\"40%\" align=center bgcolor =\"FFFF00\">SERVICE CLOUD USER</td>
