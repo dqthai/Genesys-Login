@@ -29,15 +29,6 @@
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-
-			$file = 'log.txt';
-			$data = "Name: $first $last\nAlias: $alias\nEmail: $email\nUsername: $username\n Nickname: $nickname\n";	
-			$download_me = "download";
-			file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
-			header("Content-type: text/plain");
-  			header("Content-Disposition: attachment; filename='log.txt'");
-			
-  			echo $download_me;
 			
 		} else {
 			echo "Registration Failed. Try again later or username already exists";

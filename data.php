@@ -59,6 +59,12 @@ while($row1=pg_fetch_array($permissions)){
 				echo "<tr><td>$id</td><td>$username</td><td>$user_license</td><td>$profile</td><td>$service_cloud_user</td><td>$salesforce1_user</td><td>$call_center</td></tr>";		
 }
 				echo "</table>";
+	
+			$download_me = "download";
+			header("Content-type: text/plain");
+  			header("Content-Disposition: attachment; filename='log.txt'");
+			
+  			echo $download_me;
 
 pg_close();
 
