@@ -22,6 +22,12 @@
 	$registered = pg_affected_rows($result);
 	$permission_success = pg_affected_rows($permissions);
 	echo "$registered row was inserted and $permission_success row was inserted";
+	echo "You have successfully registered";
+	echo "Name: $first $last";
+	echo "Alias: $alias";
+	echo "Email: $email";
+	echo "Username: $username";
+	echo "Nickname: $nickname";
 	} else {
 		echo "you have to complete the form!";
 	}
