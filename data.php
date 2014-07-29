@@ -60,11 +60,6 @@ while($row1=pg_fetch_array($permissions)){
 }
 				echo "</table>";
 	
-			$download_me = "download";
-			header("Content-type: text/plain");
-  			header("Content-Disposition: attachment; filename='log.txt'");
-			
-  			echo $download_me;
 
 pg_close();
 
