@@ -18,7 +18,7 @@
 			exit;
 		}
 	$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
-	$permissions = pg_query("INSERT INTO permissions VALUES('$username')");
+	$permissions = pg_query("INSERT INTO permissions(username) VALUES('$username')");
 	$registered = pg_affected_rows($result);
 	$permission_success = pg_affected_rows($permissions);
 	echo "$registered row was inserted and $permission_success row was inserted <br />";
