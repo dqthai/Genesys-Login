@@ -17,7 +17,7 @@
   		$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
   		foreach(explode("\n", $message) as $line) {
     			$syslog_message = "<22>" . date('M d H:i:s ') . $program . ' ' . $component . ': ' . $line;
-    			socket_sendto($sock, $syslog_message, strlen($syslog_message), 0, logs2.papertrailapp.com, 18430);
+    			socket_sendto($sock, $syslog_message, strlen($syslog_message), 0, "logs2.papertrailapp.com", 18430);
   		}
   		socket_close($sock);
 }
