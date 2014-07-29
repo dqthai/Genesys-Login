@@ -11,6 +11,23 @@
 	  function pg_connection_string(){
 		return  "dbname=d9obju9qqjs2bl host=ec2-23-23-183-5.compute-1.amazonaws.com port=5432 user=hjaabcekfmalra password=IAQJ5iBAKcazgisvh5PQeSWAdV sslmode=require";
 	}
+# replace PAPERTRAIL_HOSTNAME and PAPERTRAIL_PORT
+# see http://help.papertrailapp/ for additional PHP syslog options
+ 
+function send_remote_syslog($message, $component = "web", $program = "next_big_thing") {
+  $sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+  foreach(explode("\n", $message) as $line) {
+    $syslog_message = "<22>" . date('M d H:i:s ') . $program . ' ' . $component . ': ' . $line;
+    socket_sendto($sock, $syslog_message, strlen($syslog_message), 0, logs2.papertrailapp.com, 18430);
+  }
+  socket_close($sock);
+}
+ 
+send_remote_syslog("Test");
+# send_remote_syslog("Any log message");
+# send_remote_syslog("Something just happened", "other-component");
+# send_remote_syslog("Something just happened", "a-background-job-name", "whatever-app-name");
+?>
 
 		$db = pg_connect(pg_connection_string());
 		if(!$db) {

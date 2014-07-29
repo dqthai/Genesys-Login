@@ -29,7 +29,7 @@
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-			
+			header('Content-type: text/html; charset=utf-8');
 		} else {
 			echo "Registration Failed. Try again later or username already exists";
 		}
