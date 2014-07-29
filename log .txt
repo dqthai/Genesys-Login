@@ -1,0 +1,10 @@
+1 row was inserted and 1 row was inserted <br />You have successfully registered <br />Name: a a <br />Alias: a <br />Email: a <br />Username: a <br />Nickname: aName: a a
+Alias: a
+Email: a
+Username: a
+ Nickname: a
+<center><h3>
+<p><a href="index.php">Form</a>&nbsp
+<a href="data.php">Users</a>&nbsp
+</center></h3>
+
