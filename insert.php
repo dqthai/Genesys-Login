@@ -29,6 +29,10 @@
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
+
+			$file = 'log.txt';
+			$data = "Name: $first $last\nAlias: $alias\nEmail: $email\nUsername: $username\n Nickname: $nickname\n";
+			file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
 		} else {
 			echo "Registration Failed. Try again later or username already exists";
 		}
