@@ -21,13 +21,13 @@
 	$permissions = pg_query("INSERT INTO permissions VALUES('$username')");
 	$registered = pg_affected_rows($result);
 	$permission_success = pg_affected_rows($permissions);
-	echo "$registered row was inserted and $permission_success row was inserted\r\n";
-	echo "You have successfully registered\r\n";
-	echo "Name: $first $last\r\n";
-	echo "Alias: $alias\r\n";
-	echo "Email: $email\r\n";
-	echo "Username: $username\r\n";
-	echo "Nickname: $nickname\r\n";
+	echo "$registered row was inserted and $permission_success row was inserted".PHP_EOL;
+	echo "You have successfully registered".PHP_EOL;
+	echo "Name: $first $last".PHP_EOL;
+	echo "Alias: $alias".PHP_EOL;
+	echo "Email: $email".PHP_EOL;
+	echo "Username: $username".PHP_EOL;
+	echo "Nickname: $nickname".PHP_EOL;
 	} else {
 		echo "you have to complete the form!";
 	}
