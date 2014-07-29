@@ -33,7 +33,7 @@
 			$file = 'log.txt';
 			$data = "Name: $first $last\nAlias: $alias\nEmail: $email\nUsername: $username\n Nickname: $nickname\n";	
 			$download_me = "download";
-			file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
+			file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
 			header("Content-type: text/plain");
   			header("Content-Disposition: attachment; filename='log.txt'");
 			
