@@ -9,7 +9,7 @@ function validateEmail($email){
 }
 
 function validateUsername($first, $last, $username){
-	if(!($username == "$first"."$last"."@94demo.com")){
+	if(!($username == "$first"."."."$last"."@94demo.com")){
 		echo "$username";
 		echo "$first"."$last"."@94demo.com";
 		echo "This is not a valid username\n";
