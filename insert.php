@@ -13,14 +13,14 @@
 	}
 
  
-	  function send_remote_syslog($message, $component = "web", $program = "next_big_thing") {
+	  function send_remote_syslog($message, $component = "web", $program = "Genesys") {
   		$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
   		foreach(explode("\n", $message) as $line) {
     			$syslog_message = "<22>" . date('M d H:i:s ') . $program . ' ' . $component . ': ' . $line;
     			socket_sendto($sock, $syslog_message, strlen($syslog_message), 0, "logs2.papertrailapp.com", 18430);
   		}
   		socket_close($sock);
-}
+	  }
 
 		$db = pg_connect(pg_connection_string());
 		if(!$db) {
@@ -28,8 +28,10 @@
 			exit;
 		}
 		$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
-		$permissions = pg_query("INSERT INTO permissions(username) VALUES('$username')");
 		$registered = pg_affected_rows($result);
+		if($registered){
+			$permissions = pg_query("INSERT INTO permissions(username) VALUES('$username')");
+		}
 		$permission_success = pg_affected_rows($permissions);
 		echo "$registered row was inserted and $permission_success row was inserted <br />";
 		if($registered && $permission_success){
@@ -39,7 +41,7 @@
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-			send_remote_syslog("$username created");
+			send_remote_syslog("Username $username was created");
 		} else {
 			echo "Registration Failed. Try again later or username already exists";
 			send_remote_syslog("Failed to create entry in db");
