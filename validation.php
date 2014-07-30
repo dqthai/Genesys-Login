@@ -19,7 +19,7 @@ function validateUsername($first, $last, $username){
 }
 
 function validateNickname($first, $last, $nickname){
-	$first_letter = substr($first,0,0);
+	$first_letter = substr($first,0,1);
 	if(!($nickname == "$first_letter"."$last"."_94demo")){
 		echo "$nickname";
 		echo "  "."$first_letter"."$last"."_94demo";
