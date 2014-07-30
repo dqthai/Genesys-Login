@@ -8,10 +8,12 @@
 	$language = $_REQUEST['language'];
 	
 	if($first && $last && $alias && $email && $username && $nickname && $language){
-	  	if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			echo "This is not a valid email address";
-			exit;
-		}
+
+		include("validation.php");
+		validateEmail($email);
+		validateUsername($first,$last,$username);
+		validateNickname($first,$last,$nickname);
+
 		include("connection.php");
 		
 		$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
