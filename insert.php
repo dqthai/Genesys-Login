@@ -21,9 +21,6 @@
   		}
   		socket_close($sock);
 }
- 
-send_remote_syslog("Test");
-
 
 		$db = pg_connect(pg_connection_string());
 		if(!$db) {
@@ -42,9 +39,11 @@ send_remote_syslog("Test");
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-			header('Content-type: text/html; charset=utf-8');
+			send_remote_syslog("$username created");
 		} else {
 			echo "Registration Failed. Try again later or username already exists";
+			send_remote_syslog("Failed to create entry in db");
+
 		}
 	} else {
 		echo "you have to complete the form!";

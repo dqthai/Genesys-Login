@@ -36,6 +36,4 @@ $result = pg_query("SELECT * FROM users");
 			} 
 			echo "</table>";
 
-pg_close();
-
 ?>

@@ -24,7 +24,4 @@ while($row1=pg_fetch_array($permissions)){
 }
 				echo "</table>";
 	
-
-pg_close();
-
 ?>
