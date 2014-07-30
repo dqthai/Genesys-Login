@@ -8,6 +8,7 @@
 	$language = $_REQUEST['language'];
 	
 	if($first && $last && $alias && $email && $username && $nickname && $language){
+
 		include("validation.php");
 		validateEmail($email);
 		validateUsername($first,$last,$username);
