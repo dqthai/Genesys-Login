@@ -24,6 +24,8 @@ function validateUsername($first, $last, $username){
 function validateNickname($first, $last, $nickname){
 	$first_letter = substr($first,0,1);
 	$checkValid = "$first_letter"."$last"."_94demo";
+	$nickname = strtolower($nickname);
+	$checkValid = strtolower($checkValid);
 	if(!($nickname == $checkValid)){
 		echo "This is not a valid nickname.";
 		echo "<br />";

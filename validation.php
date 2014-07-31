@@ -10,7 +10,7 @@ function validateEmail($email){
 }
 
 function validateUsername($first, $last, $username){
-	$checkValid = "$first"."."."$last"."@94demo.com");
+	$checkValid = "$first"."."."$last"."@94demo.com";
 	$username = strtolower($username);
 	$checkValid = strtolower($checkValid);
 	if(!($username == $checkValid){
