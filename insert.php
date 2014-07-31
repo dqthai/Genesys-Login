@@ -31,6 +31,8 @@
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
 			send_remote_syslog("Username $username was created");
+			send_remoteOsyslog("Default permissions set
+			successfully");
 		} else {
 			echo "Registration Failed. Try again later or username, email, or nickname already exists";
 			send_remote_syslog("Failed to create entry in db");
