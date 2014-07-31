@@ -34,7 +34,6 @@
 		} else {
 			echo "Registration Failed. Try again later or username, email, or nickname already exists";
 			send_remote_syslog("Failed to create entry in db");
-
 		}
 	} else {
 		echo "You have to complete the form!";
