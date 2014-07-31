@@ -11,7 +11,6 @@ language text
 
 
 CREATE TABLE permissions (
-id serial,
 username text UNIQUE,
 user_license text DEFAULT 'Salesforce',
 profile text DEFAULT 'Genesys Demo User',
