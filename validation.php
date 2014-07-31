@@ -13,7 +13,7 @@ function validateUsername($first, $last, $username){
 	$checkValid = "$first"."."."$last"."@94demo.com";
 	$username = strtolower($username);
 	$checkValid = strtolower($checkValid);
-	if(!($username == $checkValid){
+	if(!($username == $checkValid)){
 		echo "This is not a valid username.";
 		echo "<br />";
 		echo "Please go back and sumbit a valid username in the form (firstname.lastname@94demo.com).";
