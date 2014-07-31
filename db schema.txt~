@@ -9,7 +9,6 @@ nickname text UNIQUE,
 language text
 );
 
-
 CREATE TABLE permissions (
 id serial,
 username text UNIQUE,
