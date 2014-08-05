@@ -1,13 +1,13 @@
 <?php
 
-define("USERNAME", "d_thai94@yahoo.com");
-define("PASSWORD", "Nanking1!");
+define("USERNAME", "kimlan.do@42demo.com");
+define("PASSWORD", "Genesys2!");
 define("SECURITY_TOKEN", "2oFQNgwgpig7ngyw4tjGbs9g");
 
-require_once('soapclient/SforcePartnerClient.php');
+require_once('soapclient/SforceEnterpriseClient.php');
 
-$mySforceConnection = new SForcePartnerClient();
-$mySforceConnection->createConnection("partner.wsdl.xml");
+$mySforceConnection = new SForceEnterpriseClient();
+$mySforceConnection->createConnection("enterprise.wsdl.xml");
 $mySforceConnection->login(USERNAME, PASSWORD.SECURITY_TOKEN);
 
 ?>
