@@ -31,18 +31,8 @@
     $new_user->ProfileId = '00e80000000pdX4AAI';
     
     $response = $mySforceConnection->create($new_user, "User");
-		
-		
-		
-		
-		$result = pg_query("INSERT INTO users(first,last,alias,email,username,nickname,language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$language')");
-		$registered = pg_affected_rows($result);
-		if($registered){
-			$permissions = pg_query("INSERT INTO permissions(username) VALUES('$username')");
-		}
-		$permission_success = pg_affected_rows($permissions);
-		echo "$registered row was inserted and $permission_success row was inserted <br />";
-		if($registered && $permission_success){
+		echo $response;
+		if($response){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
 			echo "Alias: $alias <br />";
