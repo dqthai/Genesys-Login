@@ -1,6 +1,5 @@
 {
 	"require": {
 		"ext-soap": "*",
-		"monolog/monolog": "~1.7"
 	}
 }
