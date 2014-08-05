@@ -15,7 +15,6 @@
 		validateNickname($first,$last,$nickname);
 
 		include("connection.php");
-		include("sforce_connection.php");
 		
 		$new_user =  new stdclass();
 		$new_user->Username = $username;
