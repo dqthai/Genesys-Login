@@ -17,18 +17,20 @@
 		include("connection.php");
 		include("sforce_connection.php");
 		
-		$new_user =  new stdclass();
-		$new_user->Username = $username;
-		$new_user->Last = $last;
-		$new_user->First = $first;
-		$new_user->Email = $email;
-    $new_user->Alias = $alias;
-    $new_user->CommunityNickname = $nickname;
-    $new_user->IsActive = 'true';
-    $new_user->TimeZoneSidKey = 'America/New_York';
-    $new_user->LocalSIdKEy = 'en_US';
-    $new_user->EmailEncodingKey = 'ISO-8859-1';
-    $new_user->ProfileId = '00e80000000pdX4AAI';
+		$new_user = array();
+		
+		$new_user[0] =  new stdclass();
+		$new_user[0]->Username = $username;
+		$new_user[0]->Last = $last;
+		$new_user[0]->First = $first;
+		$new_user[0]->Email = $email;
+    $new_user[0]->Alias = $alias;
+    $new_user[0]->CommunityNickname = $nickname;
+    $new_user[0]->IsActive = 'true';
+    $new_user[0]->TimeZoneSidKey = 'America/New_York';
+    $new_user[0]->LocalSIdKEy = 'en_US';
+    $new_user[0]->EmailEncodingKey = 'ISO-8859-1';
+    $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     
     $response = $mySforceConnection->create($new_user, "User");
 		echo $response;
