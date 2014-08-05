@@ -2,7 +2,7 @@
 
 define("USERNAME", "kimlan.do@42demo.com");
 define("PASSWORD", "Genesys2!");
-define("SECURITY_TOKEN", "IQn0sf2HpbfyVxwWtBNzsEh3");
+define("SECURITY_TOKEN", "2oFQNgwgpig7ngyw4tjGbs9g");
 
 require_once('soapclient/SforceEnterpriseClient.php');
 
