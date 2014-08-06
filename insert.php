@@ -33,6 +33,12 @@
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     
     $response = $mySforceConnection->create($new_user, 'User');
+
+    $ids = array();
+    foreach($response as $i => $result){
+      echo $new_user[$i]->Username. "<br />\n";
+      array_push($ids, $result->id);
+    }
     
 		echo $response;
 		if($response){
