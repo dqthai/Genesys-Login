@@ -33,7 +33,7 @@
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     $new_user[0]->LanguageLocaleKey = 'en_US';
     
-    $response = $mySforceConnection->create($new_user, 'User');
+    $response = $mySforceConnection->create($new_user, 'Users');
     
     echo "\nAdded: \n";
     $ids = array();
