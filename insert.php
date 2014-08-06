@@ -31,6 +31,7 @@
     $new_user[0]->LocaleSidKey = 'en_US';
     $new_user[0]->EmailEncodingKey = 'ISO-8859-1';
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
+    $new_user[0]->LanguageLocaleKey = 'en_US';
     
     $response = $mySforceConnection->create($new_user, 'User');
     
