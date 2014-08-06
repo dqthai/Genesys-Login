@@ -33,14 +33,15 @@
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     
     $response = $mySforceConnection->create($new_user, 'User');
-
+    
+    echo "\nAdded: \n";
     $ids = array();
     foreach($response as $i => $result){
       echo $new_user[$i]->Username. "<br />\n";
       array_push($ids, $result->id);
     }
     
-		echo $response;
+		/*echo $response;
 		if($response){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
@@ -54,13 +55,13 @@
 			echo "Registration Failed. Try again later or username, email, or nickname already exists";
 			send_remote_syslog("Failed to create entry in db");
 		}
-	
+    */	
 		pg_close();
 
 	} else {
 		echo "You have to complete the form!";
 	}
-
+ 
 	include("links.php");
 ?>
 
