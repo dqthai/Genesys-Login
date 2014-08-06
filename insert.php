@@ -21,8 +21,8 @@
 		
 		$new_user[0] =  new stdclass();
 		$new_user[0]->Username = $username;
-		$new_user[0]->Last = $last;
-		$new_user[0]->First = $first;
+		$new_user[0]->LastName = $last;
+		$new_user[0]->FirstName = $first;
 		$new_user[0]->Email = $email;
     $new_user[0]->Alias = $alias;
     $new_user[0]->CommunityNickname = $nickname;
