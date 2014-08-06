@@ -28,7 +28,7 @@
     $new_user[0]->CommunityNickname = $nickname;
     $new_user[0]->IsActive = 'true';
     $new_user[0]->TimeZoneSidKey = 'America/New_York';
-    $new_user[0]->LocalSIdKEy = 'en_US';
+    $new_user[0]->LocalSidKey = 'en_US';
     $new_user[0]->EmailEncodingKey = 'ISO-8859-1';
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     
