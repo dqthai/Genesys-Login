@@ -33,7 +33,6 @@
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     
     $response = $mySforceConnection->create($new_user, 'User');
-    
 		echo $response;
 		if($response){
 			echo "You have successfully registered <br />";

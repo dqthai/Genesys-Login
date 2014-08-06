@@ -10,8 +10,6 @@ $mySforceConnection = new SForceEnterpriseClient();
 $mySforceConnection->createConnection("soapclient/enterprise.wsdl.xml");
 $mySforceConnection->login(USERNAME, PASSWORD.SECURITY_TOKEN);
 
-echo "sforce connection successful";
-
 
 $query = "SELECT Username from User";
 $response = $mySforceConnection->query($query);
