@@ -50,7 +50,7 @@
 			send_remote_syslog("Username $username was created");
 			send_remote_syslog("Default permissions for $username set successfully");
 		} else {
-			echo createResponse->getErrors();
+			echo $createResponse->getErrors();
 			send_remote_syslog("Failed to create entry in db");
 		}
     
