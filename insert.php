@@ -36,8 +36,9 @@
     echo "\nAdded: \n";
     //$ids = array();
     foreach($createResponse as $createResult){
-      print_r($createResult);
+      //print_r($createResult);
       //array_push($ids, $createResult->id);
+      print_r($createResult->getErrors);
     }
     	
 	  if($createResponse->isSuccess()){
