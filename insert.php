@@ -34,10 +34,10 @@
     $createResponse = $mySforceConnection->create(array($sObject), 'User');
     
     echo "\nAdded: \n";
-    $ids = array();
+    //$ids = array();
     foreach($createResponse as $createResult){
       print_r($createResult);
-      array_push($ids, $createResult->id);
+      //array_push($ids, $createResult->id);
     }
     	
 	  if($createResponse->isSuccess()){
