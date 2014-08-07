@@ -6,9 +6,14 @@ define("SECURITY_TOKEN", "IQn0sf2HpbfyVxwWtBNzsEh3");
 
 require_once('soapclient/SforceEnterpriseClient.php');
 
-$mySforceConnection = new SForceEnterpriseClient();
-$mySforceConnection->createConnection("soapclient/enterprise.wsdl.xml");
-$mySforceConnection->login(USERNAME, PASSWORD.SECURITY_TOKEN);
+try{
+  $mySforceConnection = new SForceEnterpriseClient();
+  $mySforceConnection->createConnection("soapclient/enterprise.wsdl.xml");
+  $mySforceConnection->login(USERNAME, PASSWORD.SECURITY_TOKEN);
+} catch( Exception $e) {
+  echo $mySforceConnection->getLastRequest();
+  echo $e->faultstring;
+}
 
 
 $query = "SELECT Username from User";

@@ -17,7 +17,21 @@
 		//include("connection.php");
 		include("sforce_connection.php");
 		
-		$new_user = array();
+		$sObject = new stdclasss();
+		$sObject->FirstName = 'Smith';
+		$sObject->LastName = 'John';
+		$sObject->Phone = '510-555-5555';
+		$sObject->BirthDate = '1927-01-25';
+		
+		$createResponse = $mySforceConnection->create(array($sObject), 'Contact');
+		
+		$ids = array();
+		foreach($createResponse as $createResult){
+		  print_r($createResult);
+		  array_push($isa, $createResult->id);
+		}
+				
+		/*$new_user = array();
 		
 		$new_user[0] =  new stdclass();
 		$new_user[0]->Username = $username;
@@ -41,6 +55,7 @@
       echo $new_user[$i]->Username. "<br />\n";
       array_push($ids, $result->id);
     }
+    */
     
 		/*echo $response;
 		if($response){
