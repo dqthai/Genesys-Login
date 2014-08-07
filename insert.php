@@ -34,6 +34,7 @@
     $createResponse = $mySforceConnection->create(array($sObject), 'User');
     
     foreach($createResponse as $createResult){
+      print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
     }
     	
