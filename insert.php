@@ -28,7 +28,7 @@
     $sObject->TimeZoneSidKey = 'America/New_York';
     $sObject->LocaleSidKey = 'en_US';
     $sObject->EmailEncodingKey = 'ISO-8859-1';
-    $sObject->ProfileId = '00e80000000pdX4AAI';
+    $sObject->ProfileId = '00eo0000000p8fE';
     $sObject->LanguageLocaleKey = 'en_US';
     
     $createResponse = $mySforceConnection->create(array($sObject), 'User');
