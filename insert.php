@@ -33,12 +33,9 @@
     
     $createResponse = $mySforceConnection->create(array($sObject), 'User');
     
-    echo "\nAdded: \n";
-    //$ids = array();
     foreach($createResponse as $createResult){
-      //print_r($createResult);
-      //array_push($ids, $createResult->id);
-      print_r($createResult->getErrors());
+      print_r($createResult);
+      send_remote_syslog(print_r($createResult));
     }
     	
 	  if($createResponse->isSuccess()){
