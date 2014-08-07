@@ -14,7 +14,7 @@
 		validateUsername($first,$last,$username);
 		validateNickname($first,$last,$nickname);
 
-		include("connection.php");
+		//include("connection.php");
 		include("sforce_connection.php");
 		
 		$new_user = array();
@@ -33,7 +33,7 @@
     $new_user[0]->ProfileId = '00e80000000pdX4AAI';
     $new_user[0]->LanguageLocaleKey = 'en_US';
     
-    $response = $mySforceConnection->create($new_user, 'Users');
+    $response = $mySforceConnection->create($new_user, 'User');
     
     echo "\nAdded: \n";
     $ids = array();
@@ -57,7 +57,7 @@
 			send_remote_syslog("Failed to create entry in db");
 		}
     */	
-		pg_close();
+		//pg_close();
 
 	} else {
 		echo "You have to complete the form!";
