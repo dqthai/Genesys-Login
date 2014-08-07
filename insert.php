@@ -17,7 +17,7 @@
 		//include("connection.php");
 		include("sforce_connection.php");
 		
-		$sObject = new stdclasss();
+		$sObject = new stdclass();
 		$sObject->FirstName = 'Smith';
 		$sObject->LastName = 'John';
 		$sObject->Phone = '510-555-5555';
