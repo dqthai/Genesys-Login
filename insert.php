@@ -16,46 +16,30 @@
 
 		//include("connection.php");
 		include("sforce_connection.php");
-		
-		$sObject = new stdclass();
-		$sObject->FirstName = 'Smith';
-		$sObject->LastName = 'John';
-		$sObject->Phone = '510-555-5555';
-		$sObject->BirthDate = '1927-01-25';
-		
-		$createResponse = $mySforceConnection->create(array($sObject), 'Contact');
-		
-		$ids = array();
-		foreach($createResponse as $createResult){
-		  print_r($createResult);
-		  array_push($isa, $createResult->id);
-		}
-				
-		/*$new_user = array();
-		
-		$new_user[0] =  new stdclass();
-		$new_user[0]->Username = $username;
-		$new_user[0]->LastName = $last;
-		$new_user[0]->FirstName = $first;
-		$new_user[0]->Email = $email;
-    $new_user[0]->Alias = $alias;
-    $new_user[0]->CommunityNickname = $nickname;
-    $new_user[0]->IsActive = 'true';
-    $new_user[0]->TimeZoneSidKey = 'America/New_York';
-    $new_user[0]->LocaleSidKey = 'en_US';
-    $new_user[0]->EmailEncodingKey = 'ISO-8859-1';
-    $new_user[0]->ProfileId = '00e80000000pdX4AAI';
-    $new_user[0]->LanguageLocaleKey = 'en_US';
+					
+		$sObject =  new stdclass();
+		$sObject->Username = $username;
+		$sObject->LastName = $last;
+		$sObject->FirstName = $first;
+		$sObject->Email = $email;
+    $sObject->Alias = $alias;
+    $sObject->CommunityNickname = $nickname;
+    $sObject->IsActive = 'true';
+    $sObject->TimeZoneSidKey = 'America/New_York';
+    $sObject->LocaleSidKey = 'en_US';
+    $sObject->EmailEncodingKey = 'ISO-8859-1';
+    $sObject->ProfileId = '00e80000000pdX4AAI';
+    $sObject->LanguageLocaleKey = 'en_US';
     
-    $response = $mySforceConnection->create($new_user, 'User');
+    $createResponse = $mySforceConnection->create(array($sObject), 'User');
     
     echo "\nAdded: \n";
     $ids = array();
-    foreach($response as $i => $result){
-      echo $new_user[$i]->Username. "<br />\n";
-      array_push($ids, $result->id);
+    foreach($createResponse as $createResult){
+      print_r($createResult);
+      array_push($ids, $createResult->id);
     }
-    */
+    
     
 		/*echo $response;
 		if($response){
