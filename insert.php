@@ -14,7 +14,7 @@
 		validateUsername($first,$last,$username);
 		validateNickname($first,$last,$nickname);
 
-		//include("connection.php");
+		include("connection.php");
 		include("sforce_connection.php");
 					
 		$sObject =  new stdclass();
@@ -39,10 +39,8 @@
       print_r($createResult);
       array_push($ids, $createResult->id);
     }
-    
-    
-		/*echo $response;
-		if($response){
+    	
+	  if($createResponse->isSuccess()){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
 			echo "Alias: $alias <br />";
@@ -52,11 +50,11 @@
 			send_remote_syslog("Username $username was created");
 			send_remote_syslog("Default permissions for $username set successfully");
 		} else {
-			echo "Registration Failed. Try again later or username, email, or nickname already exists";
+			echo createResponse->getErrors();
 			send_remote_syslog("Failed to create entry in db");
 		}
-    */	
-		//pg_close();
+    
+		pg_close();
 
 	} else {
 		echo "You have to complete the form!";

@@ -4,11 +4,6 @@ function pg_connection_string(){
 	return  "dbname=d9obju9qqjs2bl host=ec2-23-23-183-5.compute-1.amazonaws.com port=5432 user=hjaabcekfmalra password=IAQJ5iBAKcazgisvh5PQeSWAdV sslmode=require";
 	}
 
-$db = pg_connect(pg_connection_string());
-	if(!$db) {
-    		echo "Database connection error";
-    		exit;
-  	}
 function send_remote_syslog($message, $component = "web", $program = "Genesys") {
 	$sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 	foreach(explode("\n", $message) as $line) {
@@ -17,5 +12,12 @@ function send_remote_syslog($message, $component = "web", $program = "Genesys") 
 	}
 	socket_close($sock);
 }
+
+
+$db = pg_connect(pg_connection_string());
+	if(!$db) {
+    		echo "Database connection error";
+    		exit;
+  }
 
 ?>
