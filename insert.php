@@ -45,7 +45,7 @@
   			echo "Username: $username <br />";
   			echo "Nickname: $nickname";
       } else {
-        echo $createResult->errors;
+        echo $createResult->errors['message'];
       }
     }
     
