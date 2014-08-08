@@ -37,7 +37,7 @@
       print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
     }
-    	echo $SaveResult->isSuccesss();
+    	echo $SaveResult->isSuccess();
 	  if($SaveResult->isSuccess()){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
