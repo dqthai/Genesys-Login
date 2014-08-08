@@ -37,6 +37,7 @@
      // print_r($createResult);
     //  send_remote_syslog(print_r($createResult, true));
       var_dump(get_object_vars($createResult));
+      echo $createResult->success;
     }
 	  if($SaveResult->success){
 			echo "You have successfully registered <br />";
@@ -46,7 +47,6 @@
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
 		} else {
-		  echo "fail";
 		}
     
 		pg_close();
