@@ -39,7 +39,7 @@
       //send_remote_syslog(print_r($createResult, true));
       var_dump(get_object_vars($createResult));
       $var = get_object_vars($createResult);
-      echo $var['success'];
+      echo $var['message'];
       
     }
     
