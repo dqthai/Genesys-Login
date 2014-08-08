@@ -37,7 +37,7 @@
       print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
     }
-    	
+    	echo $createResponse->isSuccess;
 	  if($createResponse->isSuccess){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
@@ -45,7 +45,9 @@
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-		} 
+		} else {
+		  echo "fail";
+		}
     
 		pg_close();
 
