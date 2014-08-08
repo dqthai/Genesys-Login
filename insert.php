@@ -33,19 +33,16 @@
     
     $SaveResult = $mySforceConnection->create(array($sObject), 'User');
     
-    $new_m = array();
+    $ids = array();
     foreach($SaveResult as $createResult){
-      foreach($createResult as $key => $value){
-        $new_m[$key] = $value;
-      }
       //print_r($createResult);
       //send_remote_syslog(print_r($createResult, true));
-      //var_dump(get_object_vars($createResult));
+      var_dump(get_object_vars($createResult));
+      
+      echo $createResult[0];
     }
+    
 
-    foreach($new_m as $index) {
-      echo $index;
-    }
     
 	  if($SaveResult->success){
 			echo "You have successfully registered <br />";
