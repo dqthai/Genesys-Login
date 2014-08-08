@@ -38,19 +38,14 @@
       send_remote_syslog(print_r($createResult, true));
     }
     	
-	  if($createResponse->isSuccess()){
+	  if($createResponse->isSuccess){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
 			echo "Alias: $alias <br />";
 			echo "Email: $email <br />";
 			echo "Username: $username <br />";
 			echo "Nickname: $nickname";
-			send_remote_syslog("Username $username was created");
-			send_remote_syslog("Default permissions for $username set successfully");
-		} else {
-			echo $createResponse->getErrors();
-			send_remote_syslog("Failed to create entry in db");
-		}
+		} 
     
 		pg_close();
 
