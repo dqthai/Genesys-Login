@@ -31,14 +31,14 @@
     $sObject->ProfileId = '00eo0000000p8fE';
     $sObject->LanguageLocaleKey = 'en_US';
     
-    $createResponse = $mySforceConnection->create(array($sObject), 'User');
+    $SaveResult = $mySforceConnection->create(array($sObject), 'User');
     
-    foreach($createResponse as $createResult){
+    foreach($SaveResult as $createResult){
       print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
     }
-    	echo $createResponse->isSuccess;
-	  if($createResponse->isSuccess){
+    	echo $SaveResult->isSuccess;
+	  if($SaveResult->isSuccess){
 			echo "You have successfully registered <br />";
 			echo "Name: $first $last <br />";
 			echo "Alias: $alias <br />";
