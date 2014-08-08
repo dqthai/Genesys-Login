@@ -38,11 +38,10 @@
       //print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
       var_dump(get_object_vars($createResult));
-      $var = get_object_vars($createResult);
-      foreach($var as $value){
-       echo $value;
-      }
-      
+      echo $createResult->success;
+      echo $createResult->message;
+      echo $createResult->id;
+      echo $createResult->statusCode;
     }
     
 
