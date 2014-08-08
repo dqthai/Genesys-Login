@@ -46,6 +46,7 @@
   			echo "Nickname: $nickname";
       } else {
         echo $createResult->errors;
+        var_dump(get_object_vars($createResult->errors));
       }
     }
     
