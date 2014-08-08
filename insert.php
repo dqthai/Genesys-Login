@@ -42,9 +42,9 @@
       //send_remote_syslog(print_r($createResult, true));
       //var_dump(get_object_vars($createResult));
     }
-    
-    foreach($new_m as $o){
-      echo $new_m[$o];
+
+    foreach($new_m as $index) {
+      echo $index;
     }
     
 	  if($SaveResult->success){
