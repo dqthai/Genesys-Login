@@ -43,7 +43,7 @@
       //var_dump(get_object_vars($createResult));
     }
     
-    foreach($options as $o){
+    foreach($new_m as $o){
       echo $new_m[$o];
     }
     
