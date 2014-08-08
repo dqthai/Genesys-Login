@@ -33,26 +33,21 @@
     
     $SaveResult = $mySforceConnection->create(array($sObject), 'User');
     
-    $ids = array();
     foreach($SaveResult as $createResult){
       print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
       var_dump(get_object_vars($createResult));
-      array_push($ids, $createResult->id);
-      echo $createResult->success;
+      if($createResult->success) {
+   			echo "You have successfully registered <br />";
+  			echo "Name: $first $last <br />";
+  			echo "Alias: $alias <br />";
+  			echo "Email: $email <br />";
+  			echo "Username: $username <br />";
+  			echo "Nickname: $nickname";
+      } else {
+        echo $createResult->errors;
+      }
     }
-    
-
-    
-	  if($SaveResult->success){
-			echo "You have successfully registered <br />";
-			echo "Name: $first $last <br />";
-			echo "Alias: $alias <br />";
-			echo "Email: $email <br />";
-			echo "Username: $username <br />";
-			echo "Nickname: $nickname";
-		} else {
-		}
     
 		pg_close();
 
