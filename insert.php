@@ -36,6 +36,7 @@
     foreach($SaveResult as $createResult){
       print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
+      var_dump(get_object_vars($createResult));
     }
       var_dump(get_object_vars($SaveResult));
     	echo $SaveResult->success;
