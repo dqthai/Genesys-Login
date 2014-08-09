@@ -15,14 +15,4 @@ try{
   echo $e->faultstring;
 }
 
-/*
-$query = "SELECT Username from User";
-$response = $mySforceConnection->query($query);
-
-echo "Results of query '$query'<br /><br />\n";
-foreach($response->records as $record) {
-  echo $record->Username."<br />\n";
-}
-*/
-
 ?>

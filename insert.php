@@ -34,7 +34,6 @@
     $SaveResult = $mySforceConnection->create(array($sObject), 'User');
     
     foreach($SaveResult as $createResult){
-      //print_r($createResult);
       send_remote_syslog(print_r($createResult, true));
       //var_dump(get_object_vars($createResult));
       if($createResult->success) {
@@ -45,7 +44,6 @@
   			echo "Username: $username <br />";
   			echo "Nickname: $nickname";
       } else {
-        //var_dump(get_object_vars($createResult));
         echo $createResult->errors[0]->message;
       }
     }
