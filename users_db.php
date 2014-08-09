@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT Username, Firstname, Lastname, Email, Alias, CommunityNickname, LanguageLocaleKey from User";
+$query = "SELECT Username, FirstName, LastName, Email, Alias, CommunityNickname, LanguageLocaleKey from User";
 //$result = pg_query("SELECT * FROM users");
 $response = $mySforceConnection->query($query);
 			echo "<h3>USERS</h3>";
@@ -14,8 +14,8 @@ $response = $mySforceConnection->query($query);
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
 			
 			foreach($response as $record) {
-			  $first = $record->Firstname;
-			  $last = $record->Lastname;
+			  $first = $record->FirstName;
+			  $last = $record->LastName;
 			  $alias = $record->Alias;
 			  $email = $record->Email;
 			  $username = $record->Username;
