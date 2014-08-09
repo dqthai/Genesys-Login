@@ -1,5 +1,6 @@
 <?php
-	
+	  
+	include("sforce_connection.php");
 	include("connection.php");
 	include("users_db.php");
 	echo "<br /><br /><br /><br /><br /><br />";
