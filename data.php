@@ -4,7 +4,7 @@
 	include("connection.php");
 	include("users_db.php");
 	echo "<br /><br /><br /><br /><br /><br />";
-	include("permissions_db.php");
+	//include("permissions_db.php");
 	include("links.php");
 
 	pg_close();
