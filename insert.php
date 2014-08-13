@@ -52,7 +52,7 @@
     }
     
     try {
-      $result = mySforceConnection->setPassword($username, $password);
+      $result = $mySforceConnection->setPassword($username, $password);
     } catch(Exception $e) {
       echo $mySforceConnection->getLastRequest();
       echo $e->faultstring;
