@@ -34,6 +34,12 @@ function validateNickname($first, $last, $nickname){
 	}
 }
 
+function validatePassword($password, $cpassword) {
+  if($password != $cpassword) {
+    echo "Please verify your password again";
+    exit;
+  }
+}
 ?>
 
 

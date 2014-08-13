@@ -13,6 +13,8 @@
 <tr><td width"10%">Username: </td><td><input type="text" name="username" /></td></tr>
 <tr><td width"10%">Nickname: </td><td><input type="text" name="nickname" /></td></tr>
 <tr><td width"10%">Language: </td><td><select name="language"><option>English</option></select></td></tr>
+<tr><td width"10%">Password: </td><td><input type="password" name="password" /></td></tr>
+<tr><td width"10%">Confirm Password: </td><td><input type="password" name="cpassword" /></td></tr>
 
 </table>
 
