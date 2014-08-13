@@ -6,13 +6,16 @@
 	$username = $_REQUEST['username'];
 	$nickname = $_REQUEST['nickname'];
 	$language = $_REQUEST['language'];
+	$password = $_REQUEST['password'];
+	$cpassword = $_REQUEST['cpassword'];
 	
-	if($first && $last && $alias && $email && $username && $nickname && $language){
+	if($first && $last && $alias && $email && $username && $nickname && $language && $password){
 
 		include("validation.php");
 		validateEmail($email);
 		validateUsername($first,$last,$username);
 		validateNickname($first,$last,$nickname);
+		validatePassword($password, $cpassword);
 
 		include("connection.php");
 		include("sforce_connection.php");
@@ -43,9 +46,17 @@
   			echo "Email: $email <br />";
   			echo "Username: $username <br />";
   			echo "Nickname: $nickname";
+  			$userid = $createResult->id;
       } else {
         echo $createResult->errors[0]->message;
       }
+    }
+    
+    try {
+      $result = $mySforceConnection->setPassword($userid, $password);
+    } catch(Exception $e) {
+      echo $mySforceConnection->getLastRequest();
+      echo $e->faultstring;
     }
     
 		pg_close();
