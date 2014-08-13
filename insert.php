@@ -51,7 +51,7 @@
     
     try {
       $result = $mySforceConnection->resetPassword($userid);
-      echo "Email with your password has been sent.";
+      echo "\nEmail with your password has been sent.\n";
     } catch(Exception $e) {
       echo $mySforceConnection->getLastRequest();
       echo $e->faultstring;
