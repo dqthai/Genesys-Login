@@ -49,37 +49,20 @@
       }
     }
     
+    /*
     try {
       $result = $mySforceConnection->resetPassword($userid);
       echo "\nEmail with your password has been sent.\n";
     } catch(Exception $e) {
-      echo $mySforceConnection->getLastRequest();
       echo $e->faultstring;
     }
+    */
     
 		pg_close();
 
 	} else {
 		echo "You have to complete the form!";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
  
 	include("links.php");
 ?>
