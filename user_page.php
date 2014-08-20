@@ -26,7 +26,7 @@
 				
 			</table><p>
 
-			<input type="submit" value="Save and Update" />
+			<input type="submit" value="Sync to external database" />
 			<input type="hidden" name="id" value="<?php echo $_REQUEST['ids'];?>">
 			<input type="hidden" name="first" value="<?php echo $_REQUEST['firsts'];?>">
 			<input type="hidden" name="last" value="<?php echo $_REQUEST['lasts'];?>">
