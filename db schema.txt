@@ -6,6 +6,7 @@ alias text,
 email text UNIQUE,
 username text UNIQUE,
 nickname text UNIQUE,
+usertype text,
 language text
 );
 
