@@ -22,7 +22,11 @@ $response = $mySforceConnection->query($query);
 			  $nickname = $record->CommunityNickname;
 			  $language = $record->LanguageLocaleKey;
 			  $usertype = $record->UserType;
-			  echo "<tr><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$username</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";
+			  echo "<tr><td align=center><a href=\"user_page.php?usernames=$username";
+			  echo "&firsts=$first&lasts=$last&aliass=$alias&emails=$email";
+			  echo"&usernames=$username&nicknames=$nickname&usertypes=$usertype"
+			  echo"&languages=$language\">$username</a>";
+			  echo "<td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";
 			}
 
 			echo "</table>";
