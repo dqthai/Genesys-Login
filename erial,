@@ -1,0 +1,17 @@
+                                              Table "public.users"
+  Column  |  Type   |                     Modifiers                      | Storage  | Stats target | Description 
+----------+---------+----------------------------------------------------+----------+--------------+-------------
+ id       | integer | not null default nextval('users_id_seq'::regclass) | plain    |              | 
+ first    | text    |                                                    | extended |              | 
+ last     | text    |                                                    | extended |              | 
+ alias    | text    |                                                    | extended |              | 
+ email    | text    |                                                    | extended |              | 
+ username | text    |                                                    | extended |              | 
+ nickname | text    |                                                    | extended |              | 
+ language | text    |                                                    | extended |              | 
+Indexes:
+    "users_email_key" UNIQUE CONSTRAINT, btree (email)
+    "users_nickname_key" UNIQUE CONSTRAINT, btree (nickname)
+    "users_username_key" UNIQUE CONSTRAINT, btree (username)
+Has OIDs: no
+
