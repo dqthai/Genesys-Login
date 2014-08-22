@@ -27,7 +27,7 @@ $response = $mySforceConnection->query($query);
 			  echo "&firsts=$first&lasts=$last&aliass=$alias&emails=$email";
 			  echo"&usernames=$username&nicknames=$nickname&usertypes=$usertype";
 			  echo"&languages=$language\">$username</a>";
-			  echo "<td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>     $nickname</td><td>$usertype</td><td>$language</td></tr>";
+			  echo "<td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";
 			}
 
 			echo "</table>";
