@@ -1,4 +1,4 @@
-include("query_username.php");
+<?php include("query_username.php"); ?>
 <html>
 
 	<body>
