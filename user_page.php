@@ -5,6 +5,7 @@
 	include("sforce_connection.php");
 	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='$username'";
 	$response = $mySforceConnection->query($query);
+	print_r($response);
 	foreach($response as $record) {
 		$first = $record->FirstName;
 		$last = $record->LastName;
@@ -13,6 +14,7 @@
 		$nickname = $record->CommunityNickname;
 		$language = $record->LanguageLocaleKey;
 		$usertype = $record->UserType;
+	}
 	
 ?>
 <html>
@@ -58,6 +60,5 @@
 </html>
 
 <?php
-	}
 	include("links.php");
 ?>
