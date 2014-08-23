@@ -23,7 +23,7 @@ $response = $mySforceConnection->query($query);
 			  $language = $record->LanguageLocaleKey;
 			  $usertype = $record->UserType;
 
-			  echo "<tr><td align=center><a href=\"query_username.php?usernames=$username\">$username</a>";
+			  echo "<tr><td align=center><a href=\"query_username.php?usernames=$username\">$username</a></td>";
 			  echo "<td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";
 			}
 
