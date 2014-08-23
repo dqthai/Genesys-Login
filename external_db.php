@@ -1,6 +1,6 @@
 <?php
 
-$permissions = pg_query("SELECT * FROM users");
+$query = pg_query("SELECT * FROM users");
 			echo "<h3>EXTERNAL DATABASE</h3>";
 			echo "<table width=\"90%\" align=center border=2>";
 			echo "<tr>
@@ -13,7 +13,7 @@ $permissions = pg_query("SELECT * FROM users");
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">USERTYPE</td>
 			<td width=\"20%\" align=center bgcolor =\"FFFF00\">LANGUAGE</td></tr>";
 
-while($row=pg_fetch_array($permissions)){
+while($row=pg_fetch_array($query)){
 				$username=$row['username'];
 				$first=$row['first'];
 				$last=$row['last'];
