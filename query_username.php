@@ -1,6 +1,13 @@
 <?php
 
 	$username = $_REQUEST['username'];
+	$first = "";
+	$last = "";
+	$alias = "";
+	$email = "";
+	$nickname "";
+	$langage = "";
+	$usertype = "";
 	
 	include("sforce_connection.php");
 	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='$username'";
