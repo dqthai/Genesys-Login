@@ -22,7 +22,7 @@ while($row=pg_fetch_array($query)){
 				$nickname=$row['nickname'];
 				$usertype=$row['usertype'];
 				$language=$row['language'];
-				echo "<tr><td>$username</td><td>$first</td><td>$last</td><td>$aliasr</td><td>$email</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";		
+				echo "<tr><td>$username</td><td>$first</td><td>$last</td><td>$alias</td><td>$email</td><td>$nickname</td><td>$usertype</td><td>$language</td></tr>";		
 }
 				echo "</table>";
 	
