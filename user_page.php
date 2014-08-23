@@ -2,7 +2,7 @@
 <html>
 
 	<body>
-		<h3><?php echo $_POST['usernames']; ?></h3>
+		<h3><?php echo $username; ?></h3>
 
 		<form method="POST" action="sync.php">
 			<table border="0" width="60%">
