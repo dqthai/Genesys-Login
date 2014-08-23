@@ -16,6 +16,8 @@
 	$language = $record->LanguageLocaleKey;
 	$usertype = $record->UserType;
 	
+	echo $first." ".$last; 
+	
 ?>
 <html>
 
