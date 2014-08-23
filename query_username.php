@@ -5,7 +5,7 @@
 	$last = "";
 	$alias = "";
 	$email = "";
-	$nickname "";
+	$nickname = "";
 	$langage = "";
 	$usertype = "";
 	
