@@ -1,9 +1,9 @@
 <?php
 
-	$username = $_REQUEST['username'];
+	$username = $_REQUEST['usernames'];
 	
 	include("sforce_connection.php");
-	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='ashively1@genesys.com'";
+	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='$username'";
 	$response = $mySforceConnection->query($query);
 	print_r($response);
 	
