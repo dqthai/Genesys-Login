@@ -3,7 +3,7 @@
 	$username = $_REQUEST['username'];
 	
 	include("sforce_connection.php");
-	$query = pg_query("SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='$username'");
+	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username=$username";
 	$response = $mySforceConnection->query($query);
 	
 	$record = $response[0];
