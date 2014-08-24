@@ -46,7 +46,9 @@
   			$userid = $createResult->id;
   			try {
       				$result = $mySforceConnection->resetPassword($userid);
-				 echo "\nEmail with your password has been sent.\n";
+      				$password = $result->getpassword();
+      				echo "The password is $password";
+				echo "\nEmail with your password has been sent.\n";
 			} catch(Exception $e) {
 			      echo $e->faultstring;
     			}
