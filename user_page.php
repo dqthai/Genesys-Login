@@ -3,6 +3,8 @@
 	$username = $_REQUEST['usernames'];
 	
 	include("sforce_connection.php");
+	include("connection.php");
+	send_remote_syslog("querying for $username");
 	$query = "SELECT FirstName, LastName, Email, Alias, CommunityNickname, UserType, LanguageLocaleKey FROM User WHERE Username='$username'";
 	$response = $mySforceConnection->query($query);
 	
