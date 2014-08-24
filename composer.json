@@ -1,6 +1,7 @@
 {
 	"require": {
 		"ext-soap": "*",
-		"monolog/monolog": "~1.7"
+		"monolog/monolog": "~1.7",
+		"sendgrid/sendgrid": "2.0.5"
 	}
 }
