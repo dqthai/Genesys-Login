@@ -44,6 +44,12 @@
   			echo "Username: $username <br />";
   			echo "Nickname: $nickname";
   			$userid = $createResult->id;
+  			try {
+      				$result = $mySforceConnection->resetPassword($userid);
+				 echo "\nEmail with your password has been sent.\n";
+			} catch(Exception $e) {
+			      echo $e->faultstring;
+    			}
   			send_remote_syslog("$username has been created successfully.");
       } else {
         echo $createResult->errors[0]->message;
@@ -51,16 +57,7 @@
       }
     }
     
-    /*
-    try {
-      $result = $mySforceConnection->resetPassword($userid);
-      echo "\nEmail with your password has been sent.\n";
-    } catch(Exception $e) {
-      echo $e->faultstring;
-    }
-    */
-    
-		pg_close();
+	pg_close();
 
 	} else {
 		echo "You have to complete the form!";
