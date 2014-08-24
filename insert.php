@@ -44,8 +44,10 @@
   			echo "Username: $username <br />";
   			echo "Nickname: $nickname";
   			$userid = $createResult->id;
+  			send_remote_syslog("$username has been created successfully.");
       } else {
         echo $createResult->errors[0]->message;
+        send_remote_syslog("Failed to create new account.");
       }
     }
     
