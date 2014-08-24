@@ -15,6 +15,7 @@
 	$registered = pg_affected_rows($result);
 	if($registered) {
 		echo "Your values have been updated successfully!";
+		send_remote_syslog("$username has been added to external database.");
 	}
 	
 	pg_close();
