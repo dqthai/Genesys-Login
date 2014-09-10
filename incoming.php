@@ -1,3 +1,5 @@
+<?php
+
 include('connection.php');
 
 send_remote_syslog("salesforce access success");
@@ -26,3 +28,5 @@ if($succes){
 }
 
 pg_close();
+
+?>
