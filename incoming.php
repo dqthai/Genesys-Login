@@ -1,3 +1,7 @@
+include('connection.php');
+
+send_remote_syslog("salesforce access success");
+
 $body = file_get_contents("php://input");
 $body_params = json_decode($body);
 $parameters = array();
@@ -13,8 +17,6 @@ $email = $paramters['email'];
 $usertype = $usertype['usertype'];
 $language = $language['language'];
 $nickname = parameter['nickname'];
-
-include('connection.php');
 
 $result = pg_query("INSERT INTO users(first, last, alias, email, username, nickname, usertype, language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$usertype', '$language')");
 $success = pg_affected_rows($result);
