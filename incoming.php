@@ -16,9 +16,9 @@ $first = $parameters['first'];
 $last = $parameters['last'];
 $alias = $parameters['alias'];
 $email = $paramters['email'];
-$usertype = $usertype['usertype'];
-$language = $language['language'];
-$nickname = parameter['nickname'];
+$usertype = $parameters['usertype'];
+$language = $parameters['language'];
+$nickname = $parameters['nickname'];
 
 $result = pg_query("INSERT INTO users(first, last, alias, email, username, nickname, usertype, language) VALUES('$first', '$last', '$alias', '$email', '$username', '$nickname', '$usertype', '$language')");
 $success = pg_affected_rows($result);
